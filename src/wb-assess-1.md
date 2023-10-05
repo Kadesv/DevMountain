@@ -17,7 +17,7 @@ Which statement is true about JavaScript?
 - [ ] **B.** JavaScript ignores whitespace characters like spaces and newline characters.
 - [ ] **C.** JavaScript requires you to end all statements with a semicolon (`;`).
 - [ ] **D.** All of the above are true.
-- [ ] **E.** None of the above are true.
+- [x] **E.** None of the above are true.
 
 ### A.2. Turn `sum` to `2`.
 
