@@ -13,7 +13,22 @@ function commonStrings(array1, array2) {}
 // Ex.:
 //   divisibleByEither(50, 30, 29);
 //   => [29, 30, 50, 58, 60, 87, 90, 100]
-function divisibleByEither(a, b, c) {}
+function divisibleByEither(a, b, c) {
+    let listOf;
+    for(let i = 0; i < arr.length; i++){
+        if(i % a === 0){
+            listOf.push(arr[i]);
+        }
+        else if(i % b === 0){
+            listOf.push(arr[i]);
+        }
+        else if(i % c === 0){
+            listOf.push(arr[i]);
+        }
+
+    }
+    return listOf;
+}
 
 // Compress a string using the rules below and return the result. To compress a
 // string, replace consecutive duplicate characters with a number and the

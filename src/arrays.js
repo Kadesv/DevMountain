@@ -19,10 +19,10 @@ function greaterThanTen(numbers) {
 function bWords(words) {
   let newWords = [];
   for (let i = 0; i < words.length; i++) {
-    if(words[i].startsWith("B")){
+    if (words[i].startsWith("B")) {
       newWords.push(words[i]);
     }
-    else if( words[i].startsWith("b")){
+    else if (words[i].startsWith("b")) {
       newWords.push(words[i]);
     }
   }
@@ -38,7 +38,8 @@ function bWords(words) {
 //  extend([1, 2, 3], [4, 5, 6]);
 //  => [1, 2, 3, 4, 5, 6]
 function extend(originalArray, additionalItems) {
-  originalArray.splice(additionalItems);
+  
+  originalArray.push(additionalItems);
   return originalArray;
 }
 
@@ -46,16 +47,24 @@ function extend(originalArray, additionalItems) {
 // Ex.:
 //   itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 //   => ['bbb', 'eee']
-function itemsWithLength(items, length) { }
+function itemsWithLength(items, length) {
+  let onlyThree = [];
+  for (let items of array) {
+    if (items.length === 3) {
+      onlyThree.push([i]);
+    }
+  }
+  return onlyThree;
+}
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
-function everyOtherItem(items) { 
+function everyOtherItem(items) {
   let everyOther = [];
-  for(let i = 0; i < items.length; i++){
-    if(i % 2 === 0){
+  for (let i = 0; i < items.length; i++) {
+    if (i % 2 === 0) {
       everyOther.push(items[i]);
     }
   }
@@ -71,9 +80,9 @@ function everyOtherItem(items) {
 function findWordsStartingWith(words, letter) {
   let newWords = [];
   for (let i = 0; i < words.length; i++) {
-    if(words[i].startsWith(letter)){
+    if (words[i].startsWith(letter)) {
       newWords.push(words[i]);
- }
+    }
   }
   return newWords;
 }
@@ -84,7 +93,13 @@ function findWordsStartingWith(words, letter) {
 //   smallestNItems([1, 30, 4, 21, 100000], 3);
 //   => [21, 4, 1]
 function smallestNItems(items, n) {
-
+  let otherOrder = [];
+  for(let n = 0; n < items.length; n++) {
+    if(items[n] > n){
+      otherOrder.splice(items[n]);
+    }
+  }
+return otherOrder;
 }
 
 // Search for a value in the array and return its index. If the value appears
@@ -93,15 +108,17 @@ function smallestNItems(items, n) {
 // Ex.:
 //   findIndex(['a', 'b', 'c', 'a', 'b', 'c'], 'c');
 //   => 2
-function findIndex(items, value) {}
-//   let indexes = [], i;
-//   for(i = 0; i < arr.length; i++)
-//       if (arr[i] === value){
-//           indexes.push(i);
-//         }
-//         else if(){}
+function findIndex(items, value){
+  for(let value = 0; value < items.length; value ++){
+    if(value){
+      return indexfOf(value)
+    }
+    else{
+      return undefined;
+    }
+  }
+}
 
-// }
 
 // Given a start number and stop number, return a new array containing all the numbers
 // between the start and stop number.
