@@ -6,7 +6,7 @@
 //   => ['a']
 //   commonStrings(['zoo', 'space', 'zoo'], ['zoo', 'space', 'boat']);
 //   => ['zoo', 'space']
-function commonStrings(array1, array2) {}
+function commonStrings(array1, array2) { }
 
 // Given three numbers, return a list of numbers from 1 to 100 that are
 // divisible by at least one of a, b or c.
@@ -15,14 +15,14 @@ function commonStrings(array1, array2) {}
 //   => [29, 30, 50, 58, 60, 87, 90, 100]
 function divisibleByEither(a, b, c) {
     let listOf;
-    for(let i = 0; i < arr.length; i++){
-        if(i % a === 0){
+    for (let i = 0; i < arr.length; i++) {
+        if (i % a === 0) {
             listOf.push(arr[i]);
         }
-        else if(i % b === 0){
+        else if (i % b === 0) {
             listOf.push(arr[i]);
         }
-        else if(i % c === 0){
+        else if (i % c === 0) {
             listOf.push(arr[i]);
         }
 
@@ -42,6 +42,6 @@ function divisibleByEither(a, b, c) {
 //   => '4s2b'
 //   compressString('ssssbbba');
 //   => '4s3ba'
-function compressString(string) {}
+function compressString(string) { }
 
 export { commonStrings, compressString, divisibleByEither };

@@ -38,9 +38,8 @@ function bWords(words) {
 //  extend([1, 2, 3], [4, 5, 6]);
 //  => [1, 2, 3, 4, 5, 6]
 function extend(originalArray, additionalItems) {
-  
-  originalArray.push(additionalItems);
-  return originalArray;
+let newArray = originalArray.concat(additionalItems);
+  return newArray;
 }
 
 // Return an array of all items with the given length.
@@ -49,9 +48,9 @@ function extend(originalArray, additionalItems) {
 //   => ['bbb', 'eee']
 function itemsWithLength(items, length) {
   let onlyThree = [];
-  for (let items of array) {
-    if (items.length === 3) {
-      onlyThree.push([i]);
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].length === 3) {
+      onlyThree.push(item[i]);
     }
   }
   return onlyThree;
@@ -94,12 +93,12 @@ function findWordsStartingWith(words, letter) {
 //   => [21, 4, 1]
 function smallestNItems(items, n) {
   let otherOrder = [];
-  for(let n = 0; n < items.length; n++) {
-    if(items[n] > n){
+  for (let n = 0; n < items.length; n++) {
+    if (items[n] > n) {
       otherOrder.splice(items[n]);
     }
   }
-return otherOrder;
+  return otherOrder;
 }
 
 // Search for a value in the array and return its index. If the value appears
@@ -108,18 +107,16 @@ return otherOrder;
 // Ex.:
 //   findIndex(['a', 'b', 'c', 'a', 'b', 'c'], 'c');
 //   => 2
-function findIndex(items, value){
-  for(let value = 0; value < items.length; value ++){
-    if(value){
+function findIndex(items, value) {
+  for (let value = 0; value < items.length; value++) {
+    if (value) {
       return indexfOf(value)
     }
-    else{
+    else {
       return undefined;
     }
   }
 }
-
-
 // Given a start number and stop number, return a new array containing all the numbers
 // between the start and stop number.
 // Ex.:
